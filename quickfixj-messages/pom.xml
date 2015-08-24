@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.quickfixj</groupId>
 		<artifactId>quickfixj-parent</artifactId>
-		<version>1.6.0</version>
+		<version>1.7.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>quickfixj-messages</artifactId>
@@ -38,25 +38,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>org.quickfixj</groupId>
-					<artifactId>quickfixj-codegenerator</artifactId>
-					<version>${project.version}</version>
-					<executions>
-						<execution>
-							<id>${fix.name}</id>
-							<goals>
-								<goal>generate</goal>
-							</goals>
-							<configuration>
-								<dictFile>src/main/resources/${fix.spec}</dictFile>
-								<packaging>quickfix.${fix.name}</packaging>
-								<fieldPackage>quickfix.field</fieldPackage>
-								<decimal>${generator.decimal}</decimal>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
